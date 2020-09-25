@@ -68,6 +68,10 @@ int Resolver (int posx,int posy,char Lab[F][C]){
 	if(Resolver(posx+1,posy,Laberinto)||Resolver(posx-1,posy,Laberinto)||Resolver(posx,posy+1,Laberinto)||Resolver(posx,posy-1,Laberinto)){		//Derecha
     return 1;
   }
+  else if(c=='*'){
+      Laberinto[posy][posx]=' ';
+      return 0;
+    }
     return 0;
   }
 
